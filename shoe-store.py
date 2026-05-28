@@ -20,7 +20,7 @@ collection.add(
         "lightweight running shoe with responsive cushioning for daily training and marathons",
         "classic canvas low-top sneaker with rubber toe cap, timeless casual style",
         "retro heritage sneaker with suede and mesh upper, comfortable for all-day wear",
-        "waterproof leather work boot with padded collar, durable for hiking and outdoor use",
+        "durable, waterproof, leather hiking and work boot with padded collar. Great for hiking and outdoor use",
         "skate shoe with waffle outsole and suede upper, popular in streetwear and skate culture",
     ],
     metadatas=[
