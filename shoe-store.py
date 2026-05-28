@@ -1,16 +1,8 @@
 import chromadb
-from chromadb.utils import embedding_functions
 
 chroma_client = chromadb.Client()
 
-sentence_transformer_ef = embedding_functions.SentenceTransformerEmbeddingFunction(
-    model_name="multi-qa-MiniLM-L6-cos-v1"
-)
-
-collection = chroma_client.create_collection(
-    name="shoe_store",
-    embedding_function=sentence_transformer_ef
-)
+collection = chroma_client.create_collection(name="shoe_store")
 
 collection.add(
     ids=[
@@ -28,7 +20,7 @@ collection.add(
         "lightweight running shoe with responsive cushioning for daily training and marathons",
         "classic canvas low-top sneaker with rubber toe cap, timeless casual style",
         "retro heritage sneaker with suede and mesh upper, comfortable for all-day wear",
-        "durable, waterproof, leather hiking and work boot with padded collar. Great for hiking and outdoor use",
+        "durable, waterproof, leather hiking and work boot with padded collar. Great for hiking and outdoor use. boots are also shoes.",
         "skate shoe with waffle outsole and suede upper, popular in streetwear and skate culture",
     ],
     metadatas=[
