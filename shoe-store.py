@@ -1,6 +1,16 @@
 import chromadb
+from chromadb.utils import embedding_functions
 
 chroma_client = chromadb.Client()
+
+sentence_transformer_ef = embedding_functions.SentenceTransformerEmbeddingFunction(
+    model_name="multi-qa-MiniLM-L6-cos-v1"
+)
+
+collection = chroma_client.create_collection(
+    name="shoe_store",
+    embedding_function=sentence_transformer_ef
+)
 
 collection.add(
     ids=[
